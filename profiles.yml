@@ -1,0 +1,15 @@
+# profiles.yml
+my_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: psb29308.us-east-1
+      user: sharwari
+      password: Sharu@22173
+      role: SYSADMIN
+      database: BOOTCAMP
+      warehouse: WH_ANALYTICS
+      schema: MTS_RAW
+      threads: 4
+      client_session_keep_alive: False
