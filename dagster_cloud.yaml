@@ -1,0 +1,6 @@
+locations:
+- build:
+    directory: ./MTS
+  code_source:
+    module_name: MTS.definitions
+  location_name: MTS
