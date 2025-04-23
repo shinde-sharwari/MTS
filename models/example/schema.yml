@@ -1,21 +1,23 @@
 
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
+sources:
+  - name: MTS_RAW
+    database: BOOTCAMP
+    schema: MTS_RAW
+    tables:
+      - name: MTS_SALES_DATA
+        columns:
+          - name: "Rep Name"
             tests:
-                - unique
-                - not_null
+              - not_null
+          - name: "Rep Number"
+            tests:
+              - not_null
+              - unique
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+  - name: MTS
+    database: BOOTCAMP
+    schema: ETL
+    tables:
+      - name: T_PROCESS_AUDIT_LOG
