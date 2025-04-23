@@ -5,9 +5,6 @@ profile: my_dbt_project  # This should match the profile name in profiles.yml
 model-paths:
   - models
 
-macro-paths:
-  - macros
-
 models:
   my_dbt_project:
     +materialized: table
