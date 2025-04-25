@@ -8,3 +8,4 @@ model-paths:
 models:
   my_dbt_project:
     +materialized: table
+    +materialized: python
